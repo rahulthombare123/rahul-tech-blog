@@ -2,7 +2,7 @@
 
 A personal tech blog built with **HTML, CSS, and JavaScript** to showcase frontend development skills and share knowledge about web technologies.
 
-![Homepage Screenshot](assets/images/screenshot.png)  
+![Homepage Screenshot](assets/images/screenshot)  
 *(Replace with an actual screenshot of your homepage)*
 
 ## ✨ Features
@@ -77,5 +77,6 @@ Unsplash for placeholder images.
 Font Awesome for icons.
 
 Google Fonts for the Roboto Condensed font.
+
 
 Made with ❤️ by Rahul
