@@ -3,7 +3,7 @@
 A personal tech blog built with **HTML, CSS, and JavaScript** to showcase frontend development skills and share knowledge about web technologies.
 
 ![Homepage Screenshot](assets/images/screenshot.png)  
-*(Replace with an actual screenshot of your homepage)*
+
 
 ## ✨ Features
 
@@ -28,9 +28,8 @@ A personal tech blog built with **HTML, CSS, and JavaScript** to showcase fronte
 - [Google Fonts](https://fonts.google.com) (Roboto Condensed)
 
 ## 🚀 Live Demo
+https://rahulthombare123.github.io/rahul-tech-blog/
 
-[View Live Demo](https://your-username.github.io/rahul-tech-blog/)  
-*(Replace with your GitHub Pages URL after deployment)*
 
 ## 📂 Folder Structure
 rahul-tech-blog/
@@ -63,7 +62,7 @@ rahul-tech-blog/
   2. Navigate to the project folder
   cd rahul-tech-blog
 
-  Open index.html in your browser
+ 3. Open index.html in your browser
 Double‑click the file, or use a live server extension in VS Code.
 
 No build tools or dependencies required – it's pure static HTML/CSS/JS.
@@ -73,11 +72,10 @@ This project is open source and available under the MIT License.
 
 🙌 Acknowledgements
 Unsplash for placeholder images.
-
 Font Awesome for icons.
-
 Google Fonts for the Roboto Condensed font.
 
 
 Made with ❤️ by Rahul
+
 
