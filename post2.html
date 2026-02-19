@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Techniques - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">RT Dev</div>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#blogs" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://yourportfolio.com" class="nav-link" target="_blank">Portfolio</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="darkModeToggle" class="dark-toggle"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">Modern CSS Grid Techniques You Should Know</h1>
+                <div class="post-meta">
+                    <span class="post-category">CSS</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> February 28, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?w=1000&auto=format&fit=crop" alt="CSS Grid">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">CSS Grid has revolutionized the way we create layouts. In this post, we'll explore advanced grid patterns that will make your designs more flexible and maintainable.</p>
+
+                <h2>What is CSS Grid?</h2>
+                <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex responsive web layouts with ease. Unlike Flexbox (which is one-dimensional), Grid handles both rows and columns simultaneously.</p>
+
+                <h3>Basic Grid Example</h3>
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> Use <code>fr</code> units for flexible columns. They distribute available space proportionally.</p>
+                </div>
+
+                <h2>Advanced Techniques</h2>
+                <h3>1. Named Grid Areas</h3>
+                <pre><code>.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    gap: 10px;
+}
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }</code></pre>
+
+                <h3>2. Auto-fit vs Auto-fill</h3>
+                <p>Use <code>repeat(auto-fit, minmax(200px, 1fr))</code> to create responsive grids without media queries.</p>
+
+                <div class="tip-box warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p><strong>Common Mistake:</strong> Forgetting to set a minimum width can cause grids to overflow on small screens. Always use <code>minmax()</code> for responsive designs.</p>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>CSS Grid is incredibly powerful. Practice these techniques to build complex, responsive layouts with minimal code.</p>
+            </article>
+
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form class="comment-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea placeholder="Your Comment" rows="5" required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+
+                <div class="comments-list">
+                    <h3>Comments (1)</h3>
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="https://via.placeholder.com/50x50" alt="Avatar">
+                            <div>
+                                <h4>Alex Johnson</h4>
+                                <span class="comment-date">March 1, 2026</span>
+                            </div>
+                        </div>
+                        <p>Great explanation of grid areas! This really helped me understand complex layouts.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RT Dev</h3>
+                    <p>Sharing knowledge about frontend development and MERN stack. Join me on this learning journey!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get notified about new posts.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rahul. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

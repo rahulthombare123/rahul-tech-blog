@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await vs Promises - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">[same]</nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">Async/Await vs Promises: A Comparison</h1>
+                <div class="post-meta">
+                    <span class="post-category">JavaScript</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> January 15, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1189&q=80" alt="Async">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">Both Promises and async/await handle asynchronous operations in JavaScript, but they offer different syntax and benefits. Let's compare.</p>
+
+                <h2>Promises</h2>
+                <p>Promises provide a clean way to handle async operations using <code>.then()</code> and <code>.catch()</code>.</p>
+                <pre><code>fetch('/api/user')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));</code></pre>
+
+                <h2>Async/Await</h2>
+                <p>Async/await is syntactic sugar over Promises, making code look synchronous and often easier to read.</p>
+                <pre><code>async function getUser() {
+    try {
+        const response = await fetch('/api/user');
+        const data = await response.json();
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
+}</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> Use async/await when you have sequential async steps; use Promises when you need parallel operations with <code>Promise.all()</code>.</p>
+                </div>
+
+                <h2>Parallel Operations</h2>
+                <p>With Promises, you can run multiple async tasks concurrently:</p>
+                <pre><code>const [user, posts] = await Promise.all([
+    fetch('/user').then(r => r.json()),
+    fetch('/posts').then(r => r.json())
+]);</code></pre>
+
+                <h2>Error Handling</h2>
+                <p>Promises use <code>.catch()</code>; async/await uses <code>try/catch</code>. Both are valid – choose based on readability.</p>
+
+                <h2>Conclusion</h2>
+                <p>Async/await is generally preferred for its clarity, but understanding raw Promises is essential. Use the right tool for the situation.</p>
+            </article>
+
+            <section class="comments-section">...</section>
+        </div>
+    </section>
+
+    <footer class="footer">...</footer>
+    <button id="scrollToTop" class="scroll-to-top">...</button>
+    <script src="script.js"></script>
+</body>
+</html>

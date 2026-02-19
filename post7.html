@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 JavaScript Array Methods - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">[same navbar]</nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">10 JavaScript Array Methods You Must Know</h1>
+                <div class="post-meta">
+                    <span class="post-category">JavaScript</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> March 10, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="JavaScript">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">Arrays are everywhere in JavaScript. These ten methods will make your code cleaner, more readable, and more functional.</p>
+
+                <h2>1. map()</h2>
+                <p>Creates a new array by applying a function to each element.</p>
+                <pre><code>const doubled = [1,2,3].map(x => x * 2); // [2,4,6]</code></pre>
+
+                <h2>2. filter()</h2>
+                <p>Returns a new array with elements that pass a test.</p>
+                <pre><code>const evens = [1,2,3,4].filter(x => x % 2 === 0); // [2,4]</code></pre>
+
+                <h2>3. reduce()</h2>
+                <p>Accumulates values into a single result.</p>
+                <pre><code>const sum = [1,2,3].reduce((acc, x) => acc + x, 0); // 6</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> <code>reduce()</code> can also group or transform data – very powerful!</p>
+                </div>
+
+                <h2>4. forEach()</h2>
+                <p>Executes a function for each element (no return).</p>
+                <pre><code>[1,2,3].forEach(x => console.log(x));</code></pre>
+
+                <h2>5. find()</h2>
+                <p>Returns the first element that satisfies a condition.</p>
+                <pre><code>const firstEven = [1,2,3].find(x => x % 2 === 0); // 2</code></pre>
+
+                <h2>6. some() / every()</h2>
+                <p>Test if any/all elements pass a condition.</p>
+                <pre><code>[1,2,3].some(x => x > 2); // true
+[1,2,3].every(x => x > 0); // true</code></pre>
+
+                <h2>7. includes()</h2>
+                <p>Checks if an array contains a value.</p>
+                <pre><code>[1,2,3].includes(2); // true</code></pre>
+
+                <h2>8. push() / pop()</h2>
+                <p>Add/remove elements from the end.</p>
+                <pre><code>const arr = [1]; arr.push(2); // [1,2]; arr.pop(); // [1]</code></pre>
+
+                <h2>9. shift() / unshift()</h2>
+                <p>Add/remove from the beginning.</p>
+                <pre><code>arr.unshift(0); // [0,1]; arr.shift(); // [1]</code></pre>
+
+                <h2>10. slice() / splice()</h2>
+                <p><code>slice()</code> returns a portion (no mutation). <code>splice()</code> changes the array (add/remove).</p>
+                <pre><code>[1,2,3,4].slice(1,3); // [2,3]
+arr.splice(1, 1); // removes one element at index 1</code></pre>
+
+                <h2>Conclusion</h2>
+                <p>Practice these methods daily. They will transform how you work with data.</p>
+            </article>
+
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form class="comment-form">...</form>
+                <div class="comments-list">
+                    <h3>Comments (3)</h3>
+                    <div class="comment"><div class="comment-author">...</div><p>Very helpful list!</p></div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer">...</footer>
+    <button id="scrollToTop" class="scroll-to-top">...</button>
+    <script src="script.js"></script>
+</body>
+</html>

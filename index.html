@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rahul-tech-blog</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/icons/site.webmanifest" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">RT Dev</a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#blogs" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://yourportfolio.com" class="nav-link" target="_blank">Portfolio</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Frontend Developer & MERN Stack Learner</h1>
+            <p class="hero-typing">
+                I write about <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </p>
+            <p class="hero-subtitle">Join me on my learning journey!</p>
+            <a href="#blogs" class="btn">View Blogs</a>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Featured Posts</h2>
+            <div class="featured-grid">
+               <!-- Card 1 (JavaScript) - post.html -->
+<article class="featured-card">
+    <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" alt="JavaScript">
+        <span class="card-badge">JavaScript</span>
+    </div>
+    <div class="card-content">
+        <h3>Understanding Closures in JavaScript</h3>
+        <p class="card-excerpt">Closures are a fundamental concept in JavaScript. Learn how they work and why they matter with practical examples.</p>
+        <div class="card-meta">
+            <span class="card-date"><i class="far fa-calendar-alt"></i> Mar 15, 2026</span>
+            <a href="post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</article>
+
+<!-- Card 2 (CSS) - post2.html -->
+<article class="featured-card">
+    <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNzc3xlbnwwfHwwfHx8MA%3D%3D" alt="CSS">
+        <span class="card-badge">CSS</span>
+    </div>
+    <div class="card-content">
+        <h3>Modern CSS Grid Techniques You Should Know</h3>
+        <p class="card-excerpt">CSS Grid has changed layout design forever. Discover advanced grid patterns that will make your layouts flexible and clean.</p>
+        <div class="card-meta">
+            <span class="card-date"><i class="far fa-calendar-alt"></i> Feb 28, 2026</span>
+            <a href="post2.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</article>
+
+<!-- Card 3 (React) - post3.html -->
+<article class="featured-card">
+    <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="React">
+        <span class="card-badge">React</span>
+    </div>
+    <div class="card-content">
+        <h3>React Hooks: A Deep Dive into useEffect</h3>
+        <p class="card-excerpt">The useEffect hook is essential for side effects in React. Master its dependencies and cleanup patterns to avoid bugs.</p>
+        <div class="card-meta">
+            <span class="card-date"><i class="far fa-calendar-alt"></i> Jan 10, 2026</span>
+            <a href="post3.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts Section -->
+    <section class="latest-posts" id="blogs">
+        <div class="blog-grid">
+    <!-- Card 1 (HTML) - post4.html -->
+    <article class="blog-card" data-category="html">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="HTML">
+            <span class="blog-card-badge">HTML</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>Semantic HTML5 Elements You Should Use</h3>
+            <p class="blog-excerpt">Learn how to structure your web pages with semantic tags for better SEO and accessibility.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Apr 5, 2026</span>
+                <a href="post4.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Card 2 (CSS) - Flexbox vs Grid (post6.html) -->
+    <article class="blog-card" data-category="css">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="CSS">
+            <span class="blog-card-badge">CSS</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>Flexbox vs Grid: When to Use Which</h3>
+            <p class="blog-excerpt">A practical guide to choosing between Flexbox and CSS Grid for your layouts.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Mar 22, 2026</span>
+                <a href="post6.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Card 3 (JavaScript) - 10 JavaScript Array Methods (post7.html) -->
+    <article class="blog-card" data-category="javascript">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="JavaScript">
+            <span class="blog-card-badge">JavaScript</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>10 JavaScript Array Methods You Must Know</h3>
+            <p class="blog-excerpt">Master map, filter, reduce, and more to write cleaner code.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Mar 10, 2026</span>
+                <a href="post7.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Card 4 (Tips) - post5.html -->
+    <article class="blog-card" data-category="tips">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="Tips">
+            <span class="blog-card-badge">Tips</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>5 Productivity Tips for Developers</h3>
+            <p class="blog-excerpt">Boost your coding efficiency with these simple yet effective habits.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Feb 18, 2026</span>
+                <a href="post5.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Card 5 (CSS) - Creating Dark Mode (post9.html) -->
+    <article class="blog-card" data-category="css">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="CSS">
+            <span class="blog-card-badge">CSS</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>Creating Dark Mode with CSS Variables</h3>
+            <p class="blog-excerpt">Step-by-step tutorial to implement theme switching on your website.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Feb 2, 2026</span>
+                <a href="post9.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Card 6 (JavaScript) - Async/Await vs Promises (post8.html) -->
+    <article class="blog-card" data-category="javascript">
+        <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1189&q=80" alt="JavaScript">
+            <span class="blog-card-badge">JavaScript</span>
+        </div>
+        <div class="blog-card-content">
+            <h3>Async/Await vs Promises: A Comparison</h3>
+            <p class="blog-excerpt">Understand the differences and when to use each pattern.</p>
+            <div class="blog-meta">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> Jan 15, 2026</span>
+                <a href="post8.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </article>
+</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RT Dev</h3>
+                    <p>Sharing knowledge about frontend development and MERN stack. Join me on this learning journey!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get notified about new posts.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rahul. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

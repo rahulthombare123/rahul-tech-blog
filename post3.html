@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hooks - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">RT Dev</div>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#blogs" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://yourportfolio.com" class="nav-link" target="_blank">Portfolio</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="darkModeToggle" class="dark-toggle"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">React Hooks: A Deep Dive into useEffect</h1>
+                <div class="post-meta">
+                    <span class="post-category">React</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> January 10, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop" alt="React Hooks">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">The useEffect hook is essential for handling side effects in functional components. Let's explore its dependencies, cleanup patterns, and common use cases.</p>
+
+                <h2>What is useEffect?</h2>
+                <p>useEffect lets you perform side effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components, but unified into a single API.</p>
+
+                <h3>Basic Usage</h3>
+                <pre><code>import { useEffect } from 'react';
+
+function MyComponent() {
+    useEffect(() => {
+        // Code here runs after every render
+        document.title = 'New Title';
+    });
+}</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> To run an effect only once (on mount), pass an empty dependency array: <code>useEffect(() => {...}, [])</code>.</p>
+                </div>
+
+                <h2>Dependency Array</h2>
+                <p>The second argument controls when the effect re-runs:</p>
+                <ul>
+                    <li><strong>No array:</strong> Runs after every render.</li>
+                    <li><strong>Empty array []:</strong> Runs only once after initial render.</li>
+                    <li><strong>Array with values:</strong> Runs only when those values change.</li>
+                </ul>
+
+                <pre><code>useEffect(() => {
+    console.log('Count changed:', count);
+}, [count]); // Only re-run if count changes</code></pre>
+
+                <h2>Cleanup Function</h2>
+                <p>Return a function from useEffect to clean up (e.g., remove event listeners, cancel subscriptions).</p>
+                <pre><code>useEffect(() => {
+    const timer = setInterval(() => {
+        console.log('Tick');
+    }, 1000);
+
+    return () => clearInterval(timer); // Cleanup on unmount
+}, []);</code></pre>
+
+                <div class="tip-box warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p><strong>Common Pitfall:</strong> Forgetting to specify dependencies can lead to bugs. Always include all values from the component scope that the effect uses.</p>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>Mastering useEffect is crucial for building robust React applications. Practice with different dependency patterns to understand when effects run.</p>
+            </article>
+
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form class="comment-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea placeholder="Your Comment" rows="5" required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+
+                <div class="comments-list">
+                    <h3>Comments (2)</h3>
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="https://via.placeholder.com/50x50" alt="Avatar">
+                            <div>
+                                <h4>Sarah Lee</h4>
+                                <span class="comment-date">January 12, 2026</span>
+                            </div>
+                        </div>
+                        <p>Finally I understand the cleanup function! Thanks for the clear explanation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RT Dev</h3>
+                    <p>Sharing knowledge about frontend development and MERN stack. Join me on this learning journey!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get notified about new posts.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rahul. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

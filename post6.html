@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs Grid - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">RT Dev</div>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#blogs" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://yourportfolio.com" class="nav-link" target="_blank">Portfolio</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="darkModeToggle" class="dark-toggle"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">Flexbox vs Grid: When to Use Which</h1>
+                <div class="post-meta">
+                    <span class="post-category">CSS</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> March 22, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Flexbox vs Grid">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">Both Flexbox and CSS Grid are powerful layout tools, but they excel in different scenarios. In this post, we'll compare them and learn when to choose one over the other.</p>
+
+                <h2>Flexbox – One‑Dimensional Layout</h2>
+                <p>Flexbox is designed for one‑dimensional layouts – either a row OR a column. It's perfect for distributing space along a single axis and aligning items within a container.</p>
+                <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}</code></pre>
+                <p><strong>Best for:</strong> navigation bars, centering elements, card rows, and components where the size of items is unknown or dynamic.</p>
+
+                <h2>CSS Grid – Two‑Dimensional Layout</h2>
+                <p>Grid handles both rows and columns simultaneously, making it ideal for overall page layouts or complex components that need alignment in both directions.</p>
+                <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+                <p><strong>Best for:</strong> full page layouts, image galleries, dashboards, and any design that requires precise placement in two dimensions.</p>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> You can combine both! Use Grid for the overall page layout and Flexbox for components inside each grid cell.</p>
+                </div>
+
+                <h2>Quick Comparison Table</h2>
+                <table style="width:100%; border-collapse: collapse; color:white;">
+                    <tr style="background:rgba(255,255,255,0.2);">
+                        <th style="padding:10px;">Feature</th><th>Flexbox</th><th>Grid</th>
+                    </tr>
+                    <tr><td>Dimensions</td><td>1D (row or column)</td><td>2D (rows and columns)</td></tr>
+                    <tr><td>Content‑first</td><td>Yes</td><td>No (layout‑first)</td></tr>
+                    <tr><td>Item overlap</td><td>No</td><td>Yes (via grid areas)</td></tr>
+                </table>
+
+                <h2>Conclusion</h2>
+                <p>Use Flexbox for components and simple layouts; use Grid for larger, two‑dimensional designs. Mastering both will make you a layout pro.</p>
+            </article>
+
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form class="comment-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea placeholder="Your Comment" rows="5" required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+                <div class="comments-list">
+                    <h3>Comments (2)</h3>
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="https://via.placeholder.com/50x50" alt="Avatar">
+                            <div><h4>Emma Watson</h4><span class="comment-date">March 23, 2026</span></div>
+                        </div>
+                        <p>Great comparison! I used to mix them up, now it's clear.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer">[same footer as before]</footer>
+    <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

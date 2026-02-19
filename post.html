@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Rahul Tech Blog</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/icons/site.webmanifest" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">RT Dev</div>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#blogs" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://yourportfolio.com" class="nav-link" target="_blank">Portfolio</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="darkModeToggle" class="dark-toggle"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">Understanding Closures in JavaScript</h1>
+                <div class="post-meta">
+                    <span class="post-category">JavaScript</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> March 15, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="JavaScript Closures">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">Closures are one of the most powerful and often misunderstood concepts in JavaScript. In this post, we'll break down what closures are, how they work, and why you should care about them.</p>
+
+                <h2>What is a Closure?</h2>
+                <p>A closure is a function that has access to its own scope, the outer function's variables, and global variables – even after the outer function has returned. This is possible because functions in JavaScript form closures around the scope in which they are defined.</p>
+
+                <h3>Basic Example</h3>
+                <pre><code>function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log('Outer Variable: ' + outerVariable);
+        console.log('Inner Variable: ' + innerVariable);
+    }
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside'); // Logs: Outer Variable: outside, Inner Variable: inside</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> Even though <code>outerFunction</code> has finished executing, <code>innerFunction</code> still remembers the value of <code>outerVariable</code>. That's the closure in action!</p>
+                </div>
+
+                <h2>Why Use Closures?</h2>
+                <p>Closures are useful for data privacy, creating function factories, and maintaining state in asynchronous code. Here are a few practical use cases:</p>
+                <ul>
+                    <li><strong>Private Variables:</strong> You can emulate private methods by using closures.</li>
+                    <li><strong>Event Handlers:</strong> Closures preserve state when attaching event listeners.</li>
+                    <li><strong>Partial Application:</strong> Pre‑set function arguments with closures.</li>
+                </ul>
+
+                <h3>Example: Private Counter</h3>
+                <pre><code>function createCounter() {
+    let count = 0;
+    return {
+        increment: function() { count++; },
+        decrement: function() { count--; },
+        getCount: function() { return count; }
+    };
+}
+
+const counter = createCounter();
+counter.increment();
+counter.increment();
+console.log(counter.getCount()); // 2</code></pre>
+
+                <div class="tip-box warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p><strong>Common Pitfall:</strong> Closures can cause memory leaks if you're not careful, because they keep references to outer variables. Always nullify references when they're no longer needed.</p>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>Closures are a fundamental concept that every JavaScript developer must understand. They enable powerful patterns and are everywhere in modern JavaScript – from React hooks to event listeners. Practice writing your own closures to get comfortable with them.</p>
+            </article>
+
+            <section class="comments-section">
+                <h2>Leave a Comment</h2>
+                <form class="comment-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea placeholder="Your Comment" rows="5" required></textarea>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+
+                <div class="comments-list">
+                    <h3>Comments (2)</h3>
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="https://via.placeholder.com/50x50" alt="Avatar">
+                            <div>
+                                <h4>John Doe</h4>
+                                <span class="comment-date">March 16, 2026</span>
+                            </div>
+                        </div>
+                        <p>Great explanation! I finally understand closures. The examples were very helpful.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-author">
+                            <img src="https://via.placeholder.com/50x50" alt="Avatar">
+                            <div>
+                                <h4>Jane Smith</h4>
+                                <span class="comment-date">March 17, 2026</span>
+                            </div>
+                        </div>
+                        <p>Could you also cover how closures are used in React hooks? That would be awesome.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RT Dev</h3>
+                    <p>Sharing knowledge about frontend development and MERN stack. Join me on this learning journey!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get notified about new posts.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rahul. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

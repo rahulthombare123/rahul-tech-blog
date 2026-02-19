@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode with CSS Variables - Rahul Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">[same]</nav>
+
+    <section class="blog-post">
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">Creating Dark Mode with CSS Variables</h1>
+                <div class="post-meta">
+                    <span class="post-category">CSS</span>
+                    <span class="post-date"><i class="far fa-calendar-alt"></i> February 2, 2026</span>
+                    <span class="post-author"><i class="far fa-user"></i> Rahul</span>
+                </div>
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dark Mode">
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p class="post-intro">Dark mode is a popular feature. Using CSS custom properties (variables) makes it easy to implement and maintain.</p>
+
+                <h2>Step 1: Define CSS Variables</h2>
+                <p>Create a <code>:root</code> block for light mode, and a separate class for dark mode.</p>
+                <pre><code>:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary: #0066cc;
+}
+
+.dark-mode {
+    --bg-color: #222222;
+    --text-color: #f0f0f0;
+    --primary: #66b0ff;
+}</code></pre>
+
+                <h2>Step 2: Use Variables Throughout Your CSS</h2>
+                <pre><code>body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}</code></pre>
+
+                <h2>Step 3: Toggle with JavaScript</h2>
+                <pre><code>const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Save preference in localStorage
+});</code></pre>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p><strong>Tip:</strong> Save the user's preference in <code>localStorage</code> so dark mode persists across page reloads.</p>
+                </div>
+
+                <h2>Step 4: Handle System Preference (optional)</h2>
+                <p>Use the <code>prefers-color-scheme</code> media query to respect the user's OS setting.</p>
+                <pre><code>if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // enable dark mode
+}</code></pre>
+
+                <h2>Conclusion</h2>
+                <p>CSS variables make theme switching a breeze. This approach is scalable and easy to maintain. Give it a try on your own site!</p>
+            </article>
+
+            <section class="comments-section">...</section>
+        </div>
+    </section>
+
+    <footer class="footer">...</footer>
+    <button id="scrollToTop" class="scroll-to-top">...</button>
+    <script src="script.js"></script>
+</body>
+</html>
