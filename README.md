@@ -3,7 +3,7 @@
 A personal tech blog built with **HTML, CSS, and JavaScript** to showcase frontend development skills and share knowledge about web technologies.
 
 ![Homepage Screenshot](assets/images/screenshot.png)  
-![featured Screenshot](assets/images/screenshot2) 
+![featured Screenshot](assets/images/screenshot2.png) 
 
 
 ## ✨ Features
@@ -78,6 +78,7 @@ Google Fonts for the Roboto Condensed font.
 
 
 Made with ❤️ by Rahul
+
 
 
 
