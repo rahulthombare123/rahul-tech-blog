@@ -77,7 +77,8 @@ Font Awesome for icons.
 Google Fonts for the Roboto Condensed font.
 
 
-Made with ❤️ by Rahul
+Made with ❤️ by Rahul.
+
 
 
 
